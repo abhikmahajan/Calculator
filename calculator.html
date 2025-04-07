@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 bg-cover bg-center h-screen w-screen">
+    <div class="border flex justify-center items-center h-screen">
+        <div class="bg-gray-800 p-6 rounded-2xl">
+        <div class="border ">
+            <input type="text" id="output" readonly class="bg-emerald-950 border p-1 w-full h-10 text-amber-200">
+        </div>
+
+        <div id="keys" class="w-full m-2 mt-5">
+            <button id="clear" onclick="clearDisplay()" class="bg-gray-400 border rounded p-3 mx-1.5 w-14 ">C</button>
+            <button id="modulus" onclick="appendtoDisplay('%')" class="bg-gray-400 border rounded p-3 mx-1.5 w-14">%</button>
+            <button id="division" onclick="appendtoDisplay('/')" class="bg-gray-400 border rounded p-3 mx-1.5 w-14">/</button>
+            <button id="multiply" onclick="appendtoDisplay('*')" class="bg-gray-400 border rounded p-3 mx-1.5 w-14">x</button>
+        </div>
+
+        <div id="keys" class="w-full m-2">
+            <button id="seven" onclick="appendtoDisplay('7')" class="bg-gray-500 border rounded p-3 mx-1.5 w-14 ">7</button>
+            <button id="eight" onclick="appendtoDisplay('8')" class="bg-gray-500 border rounded p-3 mx-1.5 w-14 ">8</button>
+            <button id="nine" onclick="appendtoDisplay('9')" class="bg-gray-500 border rounded p-3 mx-1.5 w-14">9</button>
+            <button id="subtract" onclick="appendtoDisplay('-')" class="bg-gray-400 border rounded p-3 mx-1.5 w-14">-</button>
+        </div>
+
+        <div id="keys" class="w-full mx-2">
+            <button id="four" onclick="appendtoDisplay('4')" class="bg-gray-500 border rounded p-3 mx-1.5 w-14">4</button>
+            <button id="five" onclick="appendtoDisplay('5')" class="bg-gray-500 border rounded p-3 mx-1.5 w-14">5</button>
+            <button id="six" onclick="appendtoDisplay('6')" class="bg-gray-500 border rounded p-3 mx-1.5 w-14">6</button>
+            <button id="add" onclick="appendtoDisplay('+')" class="bg-gray-400 border rounded p-3 mx-1.5 w-14">+</button>
+        </div>
+
+        <div id="keys" class="w-full m-2">
+            <button id="one" onclick="appendtoDisplay('1')" class="bg-gray-500 border rounded p-3 mx-1.5 w-14">1</button>
+            <button id="two" onclick="appendtoDisplay('2')" class="bg-gray-500 border rounded p-3 mx-1.5 w-14">2</button>
+            <button id="three" onclick="appendtoDisplay('3')" class="bg-gray-500 border rounded p-3 mx-1.5 w-14">3</button>
+            <button id="zero" onclick="appendtoDisplay('0')" class="bg-gray-500 border rounded p-3 mx-1.5 w-14">0</button>
+        </div>
+
+        <div class="mt-4 ">
+            <button  onclick="calculate()" class="bg-yellow-300 border rounded p-2 w-full">=</button>
+        </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
